@@ -1,1 +1,118 @@
-<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width, initial-scale=1.0">        <title>Task Manager</title>    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">    <link rel="stylesheet" href="css/main.min.css">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/></head><body>        <div class="toDoList emptyList">            <header class="header">                <h1 class="heading">Task Manager</h1>                               <div class="progress_block">                    <div class="progress__bar">                        <div class="diagram progress" data-percent="20">                            <div class="piece left"></div>                            <div class="piece right"></div>                            <div class="text">                                <div>                                    <b id="showPercent">0%</b>                                                                    </div>                            </div>                        </div>                                              </div>                                        <div class="progress__aside">                        <span class="aside__title">                            Day progress                        </span>                        <div class="aside__subtitle">                            <div class="tasks__count"><span class="count" id="tasksDone">0</span> /<span class="count" id="countOfTasks">0</span></div>                            <span class="desc">tasks done</span>                                                    </div>                    </div>                    <div class="progress__icon icon">                        <svg width="16px" height="16px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"                        viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">                                         <g>                           <path d="M506.35,80.699c-7.57-7.589-19.834-7.609-27.43-0.052L331.662,227.31l-42.557-42.557c-7.577-7.57-19.846-7.577-27.423,0                               L89.076,357.36c-7.577,7.57-7.577,19.853,0,27.423c3.782,3.788,8.747,5.682,13.712,5.682c4.958,0,9.93-1.894,13.711-5.682                               l158.895-158.888l42.531,42.524c7.57,7.57,19.808,7.577,27.397,0.032l160.97-160.323                               C513.881,100.571,513.907,88.288,506.35,80.699z"/>                       </g>                                                            <g>                           <path d="M491.96,449.94H38.788V42.667c0-10.712-8.682-19.394-19.394-19.394S0,31.955,0,42.667v426.667                               c0,10.712,8.682,19.394,19.394,19.394H491.96c10.712,0,19.394-8.682,19.394-19.394C511.354,458.622,502.672,449.94,491.96,449.94z                               "/>                       </g>                                                            <g>                           <path d="M492.606,74.344H347.152c-10.712,0-19.394,8.682-19.394,19.394s8.682,19.394,19.394,19.394h126.061v126.067                               c0,10.705,8.682,19.394,19.394,19.394S512,249.904,512,239.192V93.738C512,83.026,503.318,74.344,492.606,74.344z"/>                       </g>                       </svg>                    </div>                </div>                                            </header>            <section class="section">                <div class="section__title">                    <span class="caption ">You have <span class="caption" id="remainingTasks"></span> tasks today</span>                    <span class="icon">                                                        <svg width="16px" height="16px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"                                    viewBox="0 0 438.891 438.891" style="enable-background:new 0 0 438.891 438.891;" xml:space="preserve">                                <g>                                    <g>                                        <g>                                            <path d="M347.968,57.503h-39.706V39.74c0-5.747-6.269-8.359-12.016-8.359h-30.824c-7.314-20.898-25.6-31.347-46.498-31.347                                                c-20.668-0.777-39.467,11.896-46.498,31.347h-30.302c-5.747,0-11.494,2.612-11.494,8.359v17.763H90.923                                                c-23.53,0.251-42.78,18.813-43.886,42.318v299.363c0,22.988,20.898,39.706,43.886,39.706h257.045                                                c22.988,0,43.886-16.718,43.886-39.706V99.822C390.748,76.316,371.498,57.754,347.968,57.503z M151.527,52.279h28.735                                                c5.016-0.612,9.045-4.428,9.927-9.404c3.094-13.474,14.915-23.146,28.735-23.51c13.692,0.415,25.335,10.117,28.212,23.51                                                c0.937,5.148,5.232,9.013,10.449,9.404h29.78v41.796H151.527V52.279z M370.956,399.185c0,11.494-11.494,18.808-22.988,18.808                                                H90.923c-11.494,0-22.988-7.314-22.988-18.808V99.822c1.066-11.964,10.978-21.201,22.988-21.42h39.706v26.645                                                c0.552,5.854,5.622,10.233,11.494,9.927h154.122c5.98,0.327,11.209-3.992,12.016-9.927V78.401h39.706                                                c12.009,0.22,21.922,9.456,22.988,21.42V399.185z"/>                                            <path d="M179.217,233.569c-3.919-4.131-10.425-4.364-14.629-0.522l-33.437,31.869l-14.106-14.629                                                c-3.919-4.131-10.425-4.363-14.629-0.522c-4.047,4.24-4.047,10.911,0,15.151l21.42,21.943c1.854,2.076,4.532,3.224,7.314,3.135                                                c2.756-0.039,5.385-1.166,7.314-3.135l40.751-38.661c4.04-3.706,4.31-9.986,0.603-14.025                                                C179.628,233.962,179.427,233.761,179.217,233.569z"/>                                            <path d="M329.16,256.034H208.997c-5.771,0-10.449,4.678-10.449,10.449s4.678,10.449,10.449,10.449H329.16                                                c5.771,0,10.449-4.678,10.449-10.449S334.931,256.034,329.16,256.034z"/>                                            <path d="M179.217,149.977c-3.919-4.131-10.425-4.364-14.629-0.522l-33.437,31.869l-14.106-14.629                                                c-3.919-4.131-10.425-4.364-14.629-0.522c-4.047,4.24-4.047,10.911,0,15.151l21.42,21.943c1.854,2.076,4.532,3.224,7.314,3.135                                                c2.756-0.039,5.385-1.166,7.314-3.135l40.751-38.661c4.04-3.706,4.31-9.986,0.603-14.025                                                C179.628,150.37,179.427,150.169,179.217,149.977z"/>                                            <path d="M329.16,172.442H208.997c-5.771,0-10.449,4.678-10.449,10.449s4.678,10.449,10.449,10.449H329.16                                                c5.771,0,10.449-4.678,10.449-10.449S334.931,172.442,329.16,172.442z"/>                                            <path d="M179.217,317.16c-3.919-4.131-10.425-4.363-14.629-0.522l-33.437,31.869l-14.106-14.629                                                c-3.919-4.131-10.425-4.363-14.629-0.522c-4.047,4.24-4.047,10.911,0,15.151l21.42,21.943c1.854,2.076,4.532,3.224,7.314,3.135                                                c2.756-0.039,5.385-1.166,7.314-3.135l40.751-38.661c4.04-3.706,4.31-9.986,0.603-14.025                                                C179.628,317.554,179.427,317.353,179.217,317.16z"/>                                            <path d="M329.16,339.626H208.997c-5.771,0-10.449,4.678-10.449,10.449s4.678,10.449,10.449,10.449H329.16                                                c5.771,0,10.449-4.678,10.449-10.449S334.931,339.626,329.16,339.626z"/>                                        </g>                                    </g>                                </g>                        </svg>                    </span>                </div>                <ul class="section__body list">                                                                        </ul>                            </section >            <footer class="footer">                <div class="form__wrapper  ">                    <div class="menu__icon-wrapper">                        <div class="menu__icon active ">                            <span></span>                        </div>                    </div>                                       <form  class="form " id="new_task_form" action="#">                        <input class="inputNewTask" type="text" id="new_task_title" name="new_task_title"  placeholder="Enter title">                        <input class="inputNewTask" type="text" id="new_task_desc" name="new_task_desc" placeholder="Enter task ">                        <input  class="inputNewTask" type="time" id="new_task_time" name="new_task_time"  placeholder="Enter time ">                        <button id="enterTask" type="button" ><svg   version="1.1" width="30" height="30" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g xmlns="http://www.w3.org/2000/svg"><path d="m64 96.882-47.5 16.502-14.75-14.524 62.25-84.244 62.25 84.244-14.75 14.524z" fill="#0101bb" data-original="#979fef" /><path d="m64 88.412-45.429 15.784-6.261-6.164 51.69-69.955 51.69 69.955-6.261 6.164z" fill="#00008b" data-original="#737ee6"  class=""/></g></g></svg></button>                    </form>                                   </div>                <button id="addTask" type="submit" >+</button>            </footer>        </div>               <script src="js/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Task Manager</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+        <div class="toDoList emptyList">
+            <header class="header">
+                <h1 class="heading">Task Manager</h1>
+                <div class="progress_block">
+                    <div class="progress__bar">
+                        <div class="diagram progress" data-percent="20">
+                        <div class="piece left"></div>
+                        <div class="piece right"></div>
+                        <div class="text">
+                            <div>
+                                <b id="showPercent">0%</b>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                <div class="progress__aside">
+                    <span class="aside__title">Day progress</span>
+                    <div class="aside__subtitle">
+                        <div class="tasks__count">
+                            <span class="count" id="tasksDone">0</span> /<span class="count" id="countOfTasks">0</span>
+                        </div>
+                        <span class="desc">tasks done</span>
+                    </div>
+                </div>
+                <div class="progress__icon icon"><svg width="18px" height="18px" version="1.1" id="Capa_1"   x="0px" y="0px"viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve"><g><path d="M506.35,80.699c-7.57-7.589-19.834-7.609-27.43-0.052L331.662,227.31l-42.557-42.557c-7.577-7.57-19.846-7.577-27.423,0L89.076,357.36c-7.577,7.57-7.577,19.853,0,27.423c3.782,3.788,8.747,5.682,13.712,5.682c4.958,0,9.93-1.894,13.711-5.682l158.895-158.888l42.531,42.524c7.57,7.57,19.808,7.577,27.397,0.032l160.97-160.323C513.881,100.571,513.907,88.288,506.35,80.699z"/></g><g><path d="M491.96,449.94H38.788V42.667c0-10.712-8.682-19.394-19.394-19.394S0,31.955,0,42.667v426.667c0,10.712,8.682,19.394,19.394,19.394H491.96c10.712,0,19.394-8.682,19.394-19.394C511.354,458.622,502.672,449.94,491.96,449.94z"/></g><g><path d="M492.606,74.344H347.152c-10.712,0-19.394,8.682-19.394,19.394s8.682,19.394,19.394,19.394h126.061v126.067c0,10.705,8.682,19.394,19.394,19.394S512,249.904,512,239.192V93.738C512,83.026,503.318,74.344,492.606,74.344z"/></g>
+                </svg>
+            </div>
+            </div>
+            </header>
+            <section class="section">
+                <div class="section__title">
+                    <span class="caption ">You have <span class="caption" id="remainingTasks">0</span> tasks today</span>
+                    <span class="icon">
+                                                        <svg width="18px" height="18px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 438.891 438.891" style="enable-background:new 0 0 438.891 438.891;" xml:space="preserve">
+                                <g>
+                                    <g>
+                                        <g>
+                                            <path d="M347.968,57.503h-39.706V39.74c0-5.747-6.269-8.359-12.016-8.359h-30.824c-7.314-20.898-25.6-31.347-46.498-31.347
+                                                c-20.668-0.777-39.467,11.896-46.498,31.347h-30.302c-5.747,0-11.494,2.612-11.494,8.359v17.763H90.923
+                                                c-23.53,0.251-42.78,18.813-43.886,42.318v299.363c0,22.988,20.898,39.706,43.886,39.706h257.045
+                                                c22.988,0,43.886-16.718,43.886-39.706V99.822C390.748,76.316,371.498,57.754,347.968,57.503z M151.527,52.279h28.735
+                                                c5.016-0.612,9.045-4.428,9.927-9.404c3.094-13.474,14.915-23.146,28.735-23.51c13.692,0.415,25.335,10.117,28.212,23.51
+                                                c0.937,5.148,5.232,9.013,10.449,9.404h29.78v41.796H151.527V52.279z M370.956,399.185c0,11.494-11.494,18.808-22.988,18.808
+                                                H90.923c-11.494,0-22.988-7.314-22.988-18.808V99.822c1.066-11.964,10.978-21.201,22.988-21.42h39.706v26.645
+                                                c0.552,5.854,5.622,10.233,11.494,9.927h154.122c5.98,0.327,11.209-3.992,12.016-9.927V78.401h39.706
+                                                c12.009,0.22,21.922,9.456,22.988,21.42V399.185z"/>
+                                            <path d="M179.217,233.569c-3.919-4.131-10.425-4.364-14.629-0.522l-33.437,31.869l-14.106-14.629
+                                                c-3.919-4.131-10.425-4.363-14.629-0.522c-4.047,4.24-4.047,10.911,0,15.151l21.42,21.943c1.854,2.076,4.532,3.224,7.314,3.135
+                                                c2.756-0.039,5.385-1.166,7.314-3.135l40.751-38.661c4.04-3.706,4.31-9.986,0.603-14.025
+                                                C179.628,233.962,179.427,233.761,179.217,233.569z"/>
+                                            <path d="M329.16,256.034H208.997c-5.771,0-10.449,4.678-10.449,10.449s4.678,10.449,10.449,10.449H329.16
+                                                c5.771,0,10.449-4.678,10.449-10.449S334.931,256.034,329.16,256.034z"/>
+                                            <path d="M179.217,149.977c-3.919-4.131-10.425-4.364-14.629-0.522l-33.437,31.869l-14.106-14.629
+                                                c-3.919-4.131-10.425-4.364-14.629-0.522c-4.047,4.24-4.047,10.911,0,15.151l21.42,21.943c1.854,2.076,4.532,3.224,7.314,3.135
+                                                c2.756-0.039,5.385-1.166,7.314-3.135l40.751-38.661c4.04-3.706,4.31-9.986,0.603-14.025
+                                                C179.628,150.37,179.427,150.169,179.217,149.977z"/>
+                                            <path d="M329.16,172.442H208.997c-5.771,0-10.449,4.678-10.449,10.449s4.678,10.449,10.449,10.449H329.16
+                                                c5.771,0,10.449-4.678,10.449-10.449S334.931,172.442,329.16,172.442z"/>
+                                            <path d="M179.217,317.16c-3.919-4.131-10.425-4.363-14.629-0.522l-33.437,31.869l-14.106-14.629
+                                                c-3.919-4.131-10.425-4.363-14.629-0.522c-4.047,4.24-4.047,10.911,0,15.151l21.42,21.943c1.854,2.076,4.532,3.224,7.314,3.135
+                                                c2.756-0.039,5.385-1.166,7.314-3.135l40.751-38.661c4.04-3.706,4.31-9.986,0.603-14.025
+                                                C179.628,317.554,179.427,317.353,179.217,317.16z"/>
+                                            <path d="M329.16,339.626H208.997c-5.771,0-10.449,4.678-10.449,10.449s4.678,10.449,10.449,10.449H329.16
+                                                c5.771,0,10.449-4.678,10.449-10.449S334.931,339.626,329.16,339.626z"/>
+                                        </g>
+                                    </g>
+
+                                </g>
+                        </svg>
+
+                    </span>
+                </div>
+                <ul class="section__body list">
+                 
+                    
+                   
+                </ul>
+                
+
+            </section >
+            <footer class="footer">
+                <div class="form__wrapper  ">
+                    <div class="menu__icon-wrapper">
+                        <div class="menu__icon active ">
+                            <span></span>
+                        </div>
+                    </div>
+                   
+                    <form  class="form " id="new_task_form" action="#">
+                        <input class="inputNewTask" type="text" id="new_task_title" name="new_task_title" autocomplete="off" placeholder="Enter title">
+                        <input class="inputNewTask" type="text" id="new_task_desc" name="new_task_desc" autocomplete="off" placeholder="Enter task ">
+                        <input  class="inputNewTask" type="time" id="new_task_time" name="new_task_time" autocomplete="off" placeholder="Enter time ">
+                        <button id="enterTask" type="button" ><svg   version="1.1" width="40" height="40" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g xmlns="http://www.w3.org/2000/svg"><path d="m64 96.882-47.5 16.502-14.75-14.524 62.25-84.244 62.25 84.244-14.75 14.524z" fill="#0101bb" data-original="#979fef" /><path d="m64 88.412-45.429 15.784-6.261-6.164 51.69-69.955 51.69 69.955-6.261 6.164z" fill="#00008b" data-original="#737ee6"  class=""/></g></g></svg></button>
+                    </form>
+                   
+                </div>
+                <button id="addTask" type="submit" >+</button>
+            </footer>
+        </div>
+
+       
+        <script src="js/main.js"></script>
+</body>
+</html>
