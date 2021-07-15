@@ -1,0 +1,462 @@
+@font-face {
+  font-family: "Catamaran-ExtraLight";
+  font-display: swap;
+  src: url("../fonts/Catamaran-ExtraLight.woff") format("woff"), url("../fonts/Catamaran-ExtraLight.woff2") format("woff2");
+  font-weight: 200; }
+
+@font-face {
+  font-family: "Catamaran-Medium";
+  font-display: swap;
+  src: url("../fonts/Catamaran-Medium.woff") format("woff"), url("../fonts/Catamaran-Medium.woff2") format("woff2");
+  font-weight: 500; }
+
+@font-face {
+  font-family: "Catamaran-Regular";
+  font-display: swap;
+  src: url("../fonts/Catamaran-Regular.woff") format("woff"), url("../fonts/Catamaran-Regular.woff2") format("woff2");
+  font-weight: 400; }
+
+@font-face {
+  font-family: "Catamaran-SemiBold";
+  font-display: swap;
+  src: url("../fonts/Catamaran-SemiBold.woff") format("woff"), url("../fonts/Catamaran-SemiBold.woff2") format("woff2");
+  font-weight: 600; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body, html {
+  overflow-x: hidden;
+  min-height: 100%;
+  position: relative; }
+
+body {
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+a, p, div, span {
+  font-family: "Montserrat-Regular";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2");
+  font-weight: 400; }
+
+/*@media(max-width:576px) {
+  .container {
+      width: 100%;
+  }
+}
+
+@media(min-width:576px) and (max-width:768px) {
+  .container {
+      width: 540px;
+  }
+}
+
+@media(min-width:768px) and (max-width:992px) {
+  .container {
+      width: 720px;
+
+  }
+
+}
+
+@media(min-width:992px) and (max-width:1100px) {
+  .container {
+      width: 930px;
+
+  }
+}
+
+@media(min-width:1200px) {
+  .container {
+      width: 1178px;
+  }
+}*/
+/*-----------color----------*/
+/*-------------------------*/
+/*-----------font----------*/
+/*-------------------------*/
+/*-----------Sizes----------*/
+/*-------------------------*/
+* {
+  font-family: "Catamaran-Regular";
+  font-display: swap;
+  src: url("../fonts/Catamaran-Regular.woff") format("woff"), url("../fonts/Catamaran-Regular.woff2") format("woff2");
+  font-weight: 400; }
+
+body {
+  width: 100%;
+  height: 100%;
+  padding: 10px; }
+
+.toDoList {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 0px 1px 31px -6px rgba(34, 60, 80, 0.19);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  min-height: 70vh;
+  margin-left: auto;
+  margin-right: auto; }
+
+.emptyList {
+  background: url("../img/bgEmpty.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position-y: 35vh; }
+
+.header {
+  padding-bottom: 30px; }
+  .header .heading {
+    font-family: "Catamaran-SemiBold";
+    font-display: swap;
+    src: url("../fonts/Catamaran-SemiBold.woff") format("woff"), url("../fonts/Catamaran-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    text-align: left;
+    font-size: calc(25px + 9 * ((100vw - 280px) / (1920 - 280)));
+    padding-left: 10px; }
+  .header .progress_block {
+    display: flex;
+    width: 90%;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(34, 60, 80, 0.2);
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: 15px; }
+  .header .progress__aside {
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column; }
+    .header .progress__aside .aside__title {
+      font-family: "Catamaran-Medium";
+      font-display: swap;
+      src: url("../fonts/Catamaran-Medium.woff") format("woff"), url("../fonts/Catamaran-Medium.woff2") format("woff2");
+      font-weight: 600;
+      font-size: calc(16px + 4 * ((100vw - 280px) / (1920 - 280))); }
+    .header .progress__aside .tasks__count, .header .progress__aside .count {
+      font-family: "Catamaran-Medium";
+      font-display: swap;
+      src: url("../fonts/Catamaran-Medium.woff") format("woff"), url("../fonts/Catamaran-Medium.woff2") format("woff2");
+      font-weight: 600;
+      color: #00008B; }
+    .header .progress__aside .desc {
+      font-family: "Catamaran-Medium";
+      font-display: swap;
+      src: url("../fonts/Catamaran-Medium.woff") format("woff"), url("../fonts/Catamaran-Medium.woff2") format("woff2");
+      font-weight: 500;
+      color: #a7a7a7;
+      font-size: 12px; }
+  .header .progress__icon {
+    position: absolute;
+    top: 20px;
+    right: 20px; }
+
+.section {
+  min-height: 40vh;
+  width: 100%;
+  position: relative; }
+  .section__title {
+    display: flex;
+    justify-content: space-between; }
+  .section .caption {
+    font-family: "Catamaran-Medium";
+    font-display: swap;
+    src: url("../fonts/Catamaran-Medium.woff") format("woff"), url("../fonts/Catamaran-Medium.woff2") format("woff2");
+    font-weight: 600;
+    margin-top: 0;
+    line-height: 14px;
+    font-size: 16px; }
+  .section #countOfTasks {
+    font-family: "Catamaran-Medium";
+    font-display: swap;
+    src: url("../fonts/Catamaran-Medium.woff") format("woff"), url("../fonts/Catamaran-Medium.woff2") format("woff2");
+    font-weight: 600;
+    margin-top: 0;
+    line-height: 14px;
+    font-size: 14px; }
+
+.list {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-left: 5px; }
+  .list .list__item {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    margin-bottom: 15px; }
+
+.time {
+  display: inline-flex;
+  align-items: center;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  transform: translateX(-18px); }
+  .time span {
+    display: inline-block;
+    transform: rotate(-90deg);
+    font-size: 14px;
+    color: #00008B;
+    font-family: "Catamaran-Medium";
+    font-display: swap;
+    src: url("../fonts/Catamaran-Medium.woff") format("woff"), url("../fonts/Catamaran-Medium.woff2") format("woff2");
+    font-weight: 600; }
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background: #ff4b4b;
+  border-radius: 20px;
+  flex: 1 0 90%;
+  box-sizing: border-box;
+  transform: translateX(-18px); }
+  .content .subject {
+    font-family: "Catamaran-SemiBold";
+    font-display: swap;
+    src: url("../fonts/Catamaran-Semibold.woff") format("woff"), url("../fonts/Catamaran-Semibold.woff2") format("woff2");
+    font-weight: 600;
+    font-size: calc(14px + 2 * ((100vw - 280px) / (1920 - 280)));
+    color: white;
+    letter-spacing: 2px;
+    padding: 0; }
+  .content .description {
+    font-family: "Catamaran-Regular";
+    font-display: swap;
+    src: url("../fonts/Catamaran-Regular.woff") format("woff"), url("../fonts/Catamaran-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-size: 13px;
+    color: #DCDCDC;
+    display: flex;
+    flex-flow: row wrap;
+    line-height: 14px;
+    font-size: calc(12px + 1 * ((100vw - 280px) / (1920 - 280))); }
+  .content .checkbox {
+    height: 25px;
+    display: inline-flex;
+    flex: 0 0 25px;
+    background: white;
+    padding: 5px; }
+
+.footer {
+  display: inline-flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+  align-items: center;
+  z-index: 1;
+  height: 35px;
+  padding: 10px; }
+
+#addTask {
+  flex: 0 0 45px;
+  height: 45px;
+  border: none;
+  outline: none;
+  background: #e7143e;
+  border-radius: 30%;
+  color: white;
+  font-size: 25px;
+  font-family: "Catamaran-Medium";
+  font-display: swap;
+  src: url("../fonts/Catamaran-Medium.woff") format("woff"), url("../fonts/Catamaran-Medium.woff2") format("woff2");
+  font-weight: 500;
+  transition: 0.2s;
+  box-shadow: 0px 0px 7px 3px rgba(255, 0, 0, 0.27); }
+  #addTask:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 8px 5px rgba(255, 0, 0, 0.27); }
+
+#enterTask {
+  background: none;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 20px;
+  right: 20px; }
+  #enterTask:hover {
+    cursor: pointer; }
+
+.form__wrapper-active {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.425);
+  z-index: 30;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  padding: 0 10px 0px 10px; }
+
+.menu__icon-wrapper {
+  position: absolute;
+  top: 30px;
+  right: 30px; }
+
+.menu__icon {
+  z-index: 30;
+  display: none;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  top: 0;
+  right: 0; }
+
+.menu__icon::before, .menu__icon::after, .menu__icon span {
+  left: 0;
+  position: absolute;
+  height: 16%;
+  width: 100%;
+  transition: all 0.3s ease 0s;
+  background-color: white; }
+
+.menu__icon::before, .menu__icon::after {
+  content: ""; }
+
+.menu__icon::before {
+  top: 0; }
+
+.menu__icon::after {
+  bottom: 0; }
+
+.menu__icon span {
+  top: 50%;
+  transform: scale(1) translate(0px, -50%); }
+
+.menu__icon.active {
+  display: block; }
+
+.menu__icon.active span {
+  transform: scale(0) translate(0px, -50%); }
+
+.menu__icon.active::before {
+  top: 50%;
+  background: white;
+  transform: rotate(-45deg) translate(0px, -50%); }
+
+.menu__icon.active::after {
+  bottom: 50%;
+  background: white;
+  transform: rotate(45deg) translate(0px, 50%); }
+
+.form {
+  background: white;
+  width: 100%;
+  position: relative;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 10px;
+  transform: translateY(120%);
+  transition: 0.3s; }
+
+.form-active {
+  transform: translateY(0%); }
+
+.inputNewTask {
+  border: none;
+  padding: 5px;
+  color: #555555;
+  font-size: 14px;
+  background: #ebebeb;
+  border-radius: 6px;
+  margin-bottom: 10px; }
+
+.diagram {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0000FF;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box; }
+
+.diagram::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  border-radius: 50%;
+  background: white;
+  z-index: 3;
+  opacity: 1; }
+
+.diagram .piece {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  position: absolute; }
+
+.diagram .piece::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 50%;
+  height: 100%; }
+
+.diagram .piece.left {
+  transform: rotate(0deg);
+  z-index: 2;
+  border-radius: 50%;
+  /* only FireFox < 75.0v (fix bug)*/ }
+
+.diagram.over_50 .piece.left {
+  transform: rotate(180deg); }
+
+.diagram .piece.right {
+  transform: rotate(180deg);
+  z-index: 1;
+  border-radius: 50%;
+  /* only FireFox < 75.0v (fix bug)*/ }
+
+.diagram.over_50 .piece.right {
+  transform: rotate(360deg); }
+
+.diagram .left::before {
+  background: #DCDCDC; }
+
+.diagram.over_50 .left::before {
+  background: #0000FF; }
+
+.diagram .right::before {
+  background: #DCDCDC; }
+
+.diagram .text {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.diagram .text span {
+  font-size: 16px;
+  display: block; }
+
+#showPercent {
+  color: #353535;
+  font-size: 14px; }
